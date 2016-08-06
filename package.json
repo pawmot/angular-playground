@@ -1,0 +1,10 @@
+{
+  "name": "angular-playground",
+  "version": "1.0.0",
+  "description": "AngularJS 1 playground",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Paweł Motyl",
+  "license": "ISC"
+}
