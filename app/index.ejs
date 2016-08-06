@@ -6,7 +6,7 @@
     <base href="/">
 </head>
 <body ng-app="app" ng-cloak>
-<div ng-controller="StatusCtrl">Angular works: {{ vm.works === 1 }}</div>
+<div ng-controller="StatusController">Angular works: {{ vm.works === 1 }} (elapsed time: {{ vm.elapsedSec | number: 1 }} s)</div>
 <div id="view-container"><ui-view></ui-view></div>
 <% for (var chunk in htmlWebpackPlugin.chunks) { %>
 <script src="<%= htmlWebpackPlugin.chunks[chunk]%>"></script>

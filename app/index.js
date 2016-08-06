@@ -4,10 +4,12 @@ import uiRouter from 'angular-ui-router';
 
 import routing from './routing';
 
-import StatusCtrl from './controllers/StatusCtrl';
+import StatusController from './controllers/StatusController';
 
-let app = ng.module('app', [ngMaterial, uiRouter]);
-app.controller(StatusCtrl.name, StatusCtrl);
+import index from './features/index';
+
+let app = ng.module('app', [ngMaterial, uiRouter, index]);
+app.controller(StatusController.name, StatusController);
 app.config(routing);
 
 export default app;
