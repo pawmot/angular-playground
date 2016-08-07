@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <base href="/webpack-dev-server">
+    <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+</head>
+<body ng-app="app" ng-cloak>
+<div ng-controller="StatusController">Angular works: {{ vm.works === 1 }} (elapsed time: {{ vm.elapsedSec | number: 1 }} s)</div>
+<md-content id="view-container"><ui-view></ui-view></md-content>
+<% for (var chunk in htmlWebpackPlugin.chunks) { %>
+<script src="<%= htmlWebpackPlugin.chunks[chunk]%>"></script>
+<% } %>
+</body>
+</html>

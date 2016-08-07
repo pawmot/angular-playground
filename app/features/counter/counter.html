@@ -1,0 +1,17 @@
+<md-toolbar class="md-medium-tall md-hue-2">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="navigate back">
+            <ng-md-icon icon="arrow_back" style="fill: #fff;"></ng-md-icon>
+        </md-button>
+        <h1>Counter</h1>
+    </div>
+</md-toolbar>
+
+<div>
+    <h4>The simplest adding machine ever</h4>
+    <section layout="row" layout-align="left center" layout-no-wrap>
+        <md-button class="md-raised md-primary md-hue-2" ng-click="counter.add(1)">Add</md-button>
+        <md-button class="md-raised md-warn md-hue-2" ng-click="counter.subtract(1)">Subtract</md-button>
+        <h4>Current count {{ counter.count }}</h4>
+    </section>
+</div>
