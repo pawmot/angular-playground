@@ -9,15 +9,16 @@
 <div layout="column" style="width: 70%; margin: auto">
     <form name="myForm">
         <div layout="column">
-            <md-input-container>
+            <md-input-container class="md-block">
                 <label for="template">Template (use a <code ng-non-bindable>{{variable}}</code>)</label>
-                <textarea id="template" name="template" ng-model="interpolation.template" required></textarea>
-                <div ng-messages="myForm.template.$error">
+                <textarea id="template" name="template" ng-model="interpolation.template" required ng-pattern="interpolation.pattern"></textarea>
+                <div ng-messages="myForm.template.$error" multiple>
                     <div ng-message="required">This is required!</div>
+                    <div ng-message="pattern">Use the expression in the template!</div>
                 </div>
             </md-input-container>
 
-            <md-input-container>
+            <md-input-container class="md-block">
                 <label for="variable">Variable</label>
                 <input id="variable" name="variable" type="text" ng-model="interpolation.variable" required>
                 <div ng-messages="myForm.variable.$error">
