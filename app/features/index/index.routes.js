@@ -6,6 +6,6 @@ export default function routes($stateProvider) {
         url: '/',
         template: require('./index.html'),
         controller: IndexController.name,
-        controllerAs: 'ctx'
+        controllerAs: 'index'
     });
 }

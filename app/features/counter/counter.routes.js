@@ -6,6 +6,6 @@ export default function routes($stateProvider) {
         url: '/counter',
         template: require('./counter.html'),
         controller: CounterController.name,
-        controllerAs: 'ctx'
+        controllerAs: 'counter'
     });
 }

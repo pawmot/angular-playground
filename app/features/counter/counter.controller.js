@@ -1,16 +1,16 @@
 export default class CounterController {
     constructor() {
-        this.counter = 0;
+        this.count = 0;
         console.log("Counter started!");
     }
 
     add(n) {
-        this.counter++;
-        console.log(`Counter added, now ${this.counter}`);
+        this.count++;
+        console.log(`Counter added, now ${this.count}`);
     }
 
     subtract(n) {
-        this.counter--;
-        console.log(`Counter subtracted, now ${this.counter}`);
+        this.count--;
+        console.log(`Counter subtracted, now ${this.count}`);
     }
 }
