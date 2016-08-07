@@ -7,15 +7,24 @@
     </div>
 </md-toolbar>
 <div layout="column" style="width: 70%; margin: auto">
-    <form layout="column">
-        <md-input-container>
-            <label>Template (use a <code ng-non-bindable>{{variable}}</code>)</label>
-            <textarea name="template" ng-model="interpolation.template" required></textarea>
-        </md-input-container>
-        <md-input-container>
-            <label>Variable</label>
-            <input name="var" type="text" ng-model="interpolation.variable" required>
-        </md-input-container>
+    <form name="myForm">
+        <div layout="column">
+            <md-input-container>
+                <label for="template">Template (use a <code ng-non-bindable>{{variable}}</code>)</label>
+                <textarea id="template" name="template" ng-model="interpolation.template" required></textarea>
+                <div ng-messages="myForm.template.$error">
+                    <div ng-message="required">This is required!</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container>
+                <label for="variable">Variable</label>
+                <input id="variable" name="variable" type="text" ng-model="interpolation.variable" required>
+                <div ng-messages="myForm.variable.$error">
+                    <div ng-message="required">This is required!</div>
+                </div>
+            </md-input-container>
+        </div>
     </form>
     <h4>Result:</h4>
     <pre>{{ interpolation.preview }}</pre>

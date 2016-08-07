@@ -1,6 +1,7 @@
 import ng from 'angular';
 import ngMaterial from 'angular-material';
 import ngMaterialIcons from 'angular-material-icons';
+import ngMessages from 'angular-messages';
 import uiRouter from 'angular-ui-router';
 
 import routing from './ngConfig/routing';
@@ -15,6 +16,7 @@ import interpolation from './features/interpolation';
 let app = ng.module('app', [
     ngMaterial,
     ngMaterialIcons,
+    ngMessages,
     uiRouter,
     index,
     counter,
