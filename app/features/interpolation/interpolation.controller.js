@@ -1,20 +1,14 @@
 export default class InterpolationController {
-    constructor($interpolate, $scope) {
+    constructor($scope, TemplateParser) {
         this.template = "";
         this.variable = "";
 
         $scope.$watch(() => this.template, (template) => {
-            if (template) {
-                var preview = $interpolate(template);
-                this.preview = preview({variable: this.variable});
-            }
+            this.preview = TemplateParser.parse(template, {variable: this.variable});
         });
 
         $scope.$watch(() => this.variable, (variable) => {
-            if (this.template) {
-                var preview = $interpolate(this.template);
-                this.preview = preview({variable: variable});
-            }
+            this.preview = TemplateParser.parse(this.template, {variable: variable});
         });
     }
 }

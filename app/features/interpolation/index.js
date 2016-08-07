@@ -5,9 +5,11 @@ import ngMaterialIcons from 'angular-material-icons';
 
 import routing from './interpolation.routes';
 import InterpolationController from './interpolation.controller';
+import TemplateParser from './templateParser';
 
 let module = ng.module('app.interpolation', [uiRouter, ngMaterial, ngMaterialIcons]);
 module.config(routing);
 module.controller(InterpolationController.name, InterpolationController);
+module.factory(TemplateParser.name, TemplateParser.factory);
 
 export default module.name;
