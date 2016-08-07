@@ -6,3 +6,12 @@
         <h1>Counter</h1>
     </div>
 </md-toolbar>
+
+<div>
+    <h4>The simplest adding machine ever</h4>
+    <section layout="row" layout-align="left center" layout-no-wrap>
+        <md-button class="md-raised md-primary" ng-click="ctx.add(1)">Add</md-button>
+        <md-button class="md-raised md-warn" ng-click="ctx.subtract(1)">Subtract</md-button>
+        <h4>Current count {{ ctx.counter }}</h4>
+    </section>
+</div>
