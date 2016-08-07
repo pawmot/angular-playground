@@ -2,6 +2,7 @@ export default class InterpolationController {
     constructor($scope, TemplateParser) {
         this.template = "";
         this.variable = "";
+        this.pattern = /\{\{\s*variable\s*\}\}/;
 
         $scope.$watch(() => this.template, (template) => {
             this.preview = TemplateParser.parse(template, {variable: this.variable});
