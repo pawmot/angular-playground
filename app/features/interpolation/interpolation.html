@@ -6,17 +6,17 @@
         <h1>Interpolation</h1>
     </div>
 </md-toolbar>
-<div>
-<form layout="column">
-    <md-input-container>
-        <label>Template (use a <code ng-non-bindable>{{variable}}</code>)</label>
-        <textarea name="template" ng-model="interpolation.template"></textarea>
-    </md-input-container>
-    <md-input-container>
-        <label>Variable</label>
-        <input name="var" type="text" ng-model="interpolation.variable" placeholder="variable">
-    </md-input-container>
-</form>
-<h4>Result:</h4>
-<pre>{{ interpolation.preview }}</pre>
+<div layout="column" style="width: 70%; margin: auto">
+    <form layout="column">
+        <md-input-container>
+            <label>Template (use a <code ng-non-bindable>{{variable}}</code>)</label>
+            <textarea name="template" ng-model="interpolation.template" required></textarea>
+        </md-input-container>
+        <md-input-container>
+            <label>Variable</label>
+            <input name="var" type="text" ng-model="interpolation.variable" required>
+        </md-input-container>
+    </form>
+    <h4>Result:</h4>
+    <pre>{{ interpolation.preview }}</pre>
 </div>
