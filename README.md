@@ -8,7 +8,7 @@ Project for me to fool around with AngularJS (version 1).
 To properly animate validation messages a change needs to be made to `angular-material`. 
 Version with bug: `1.1.0-rc5`. The fix is below, just replace the whole function in `node_modules/angular-material/angular-material.js` after running `npm install`.
 
-```
+```javascript
 function ngMessageAnimation($animateCss) {
   return {
     enter: function(element, done) {
