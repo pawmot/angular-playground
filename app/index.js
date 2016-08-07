@@ -10,8 +10,16 @@ import StatusController from './controllers/StatusController';
 
 import index from './features/index';
 import counter from './features/counter';
+import interpolation from './features/interpolation';
 
-let app = ng.module('app', [ngMaterial, ngMaterialIcons, uiRouter, index, counter]);
+let app = ng.module('app', [
+    ngMaterial,
+    ngMaterialIcons,
+    uiRouter,
+    index,
+    counter,
+    interpolation
+]);
 app.controller(StatusController.name, StatusController);
 app.config(routing);
 app.config(themeConfig);
