@@ -32,7 +32,7 @@ module.exports = {
             test: /\.html$/,
             loader: 'html'
         }, {
-            test: /\.(woff|woff2|ttf|eot|svg)(\?]?.*)?$/,
+            test: /\.(woff|woff2|ttf|eot|svg|ico)(\?]?.*)?$/,
             loader: 'file-loader?name=res/[name].[ext]?[hash]'
         }, {
             test: /\.json$/,
