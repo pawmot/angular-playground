@@ -1,5 +1,6 @@
 export default class StatusController {
     constructor($scope, $timeout) {
+        'ngInject';
         this.start = new Date();
         this.$timeout = $timeout;
         this.$scope = $scope;

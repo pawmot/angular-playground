@@ -1,5 +1,6 @@
 export default class InterpolationController {
     constructor($scope, TemplateParser) {
+        'ngInject';
         this.template = "";
         this.variable = "";
         this.pattern = /\{\{\s*variable\s*\}\}/;

@@ -11,6 +11,7 @@ export default class TemplateParser {
     }
 
     static factory($interpolate) {
+        'ngInject';
         return new TemplateParser($interpolate);
     }
 }

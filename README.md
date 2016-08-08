@@ -28,5 +28,6 @@ function ngMessageAnimation($animateCss) {
     leave: function(element, done) {
       return hideMessage(element, $animateCss);
     }
+  }
 }
 ```
