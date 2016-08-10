@@ -6,8 +6,9 @@ import uiRouter from 'angular-ui-router';
 
 import routing from './ngConfig/routing';
 import themeConfig from './ngConfig/theme';
+import statesConfig from './ngConfig/states';
 
-import StatusController from './controllers/StatusController';
+import HeaderController from './controllers/HeaderController';
 
 import index from './features/index';
 import counter from './features/counter';
@@ -26,8 +27,9 @@ let app = ng.module('app', [
     scopes,
     directive
 ]);
-app.controller(StatusController.name, StatusController);
+app.controller(HeaderController.name, HeaderController);
 app.config(routing);
 app.config(themeConfig);
+app.config(statesConfig);
 
 export default app;
