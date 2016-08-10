@@ -1,9 +1,12 @@
 export default class HeaderController {
-    constructor($rootScope, $state) {
+    constructor($rootScope, $state, $timeout) {
         'ngInject';
         this.processState($state.current);
 
         $rootScope.$on('$stateChangeSuccess', this.handleStateChange.bind(this));
+
+        this.elapsedSeconds = 0.0;
+        this.tick(new Date(), $timeout);
     }
 
     handleStateChange(e, newState) {
@@ -22,5 +25,10 @@ export default class HeaderController {
 
     showHideBackArrow(state) {
         this.backArrowVisible = state.name != 'index';
+    }
+
+    tick(start, $timeout) {
+        this.elapsedSeconds = (new Date() - start) / 1e3;
+        $timeout(() => this.tick(start, $timeout), 50);
     }
 }

@@ -2,5 +2,6 @@
     <md-button class="md-icon-button" aria-label="navigate to index" ui-sref="index" ng-class="{ hidden: !header.backArrowVisible}">
         <ng-md-icon icon="arrow_back" style="fill: #fff;" size="28"></ng-md-icon>
     </md-button>
-    <h1 class="md-display-2">{{header.title}}</h1>
+    <h1 class="md-display-2" flex>{{header.title}}</h1>
+    <h3 class="md-headline" style="margin-right: 50px;">Time elapsed since start: {{ header.elapsedSeconds | number: 1 }} s</h3>
 </md-toolbar>
