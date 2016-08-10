@@ -14,8 +14,12 @@
     <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
 </head>
 <body ng-app="app" ng-cloak ng-strict-di>
-<div ng-controller="StatusController">Angular works: {{ vm.works === 1 }} (elapsed time: {{ vm.elapsedSec | number: 1 }} s)</div>
-<md-content id="view-container"><ui-view></ui-view></md-content>
+<md-content id="view-container">
+    <header>
+        <div ui-view="header"></div>
+    </header>
+    <div ui-view="content"></div>
+</md-content>
 <% for (var chunk in htmlWebpackPlugin.chunks) { %>
 <script src="<%= htmlWebpackPlugin.chunks[chunk]%>"></script>
 <% } %>
