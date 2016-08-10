@@ -12,7 +12,7 @@
     <!--<meta rel="icon" href="favicon.ico" type="image/x-icon"/>-->
     <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
 </head>
-<body ng-app="app" ng-cloak>
+<body ng-app="app" ng-cloak ng-strict-di>
 <div ng-controller="StatusController">Angular works: {{ vm.works === 1 }} (elapsed time: {{ vm.elapsedSec | number: 1 }} s)</div>
 <md-content id="view-container"><ui-view></ui-view></md-content>
 <% for (var chunk in htmlWebpackPlugin.chunks) { %>
