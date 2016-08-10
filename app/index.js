@@ -13,6 +13,7 @@ import index from './features/index';
 import counter from './features/counter';
 import interpolation from './features/interpolation';
 import scopes from './features/scopes';
+import directive from './features/directive';
 
 let app = ng.module('app', [
     ngMaterial,
@@ -22,7 +23,8 @@ let app = ng.module('app', [
     index,
     counter,
     interpolation,
-    scopes
+    scopes,
+    directive
 ]);
 app.controller(StatusController.name, StatusController);
 app.config(routing);
